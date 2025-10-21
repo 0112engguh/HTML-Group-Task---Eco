@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  <title>Eco Craft</title>
+  <title>Eco Craft</title>
+  <link rel="icon" type="images" href="asset/pinus.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
 </head>
 <body>
   <section class="home">
@@ -29,5 +31,115 @@
       </div>
     </div>
   </section>
+
+  <section class="intro">
+    <div class="desc">
+      <h5>Welcome to the <span style="font-style: italic;color:#2E7D32">Greenova Labs,</span></h5>
+      <h5>Where innovation meets <span style="font-style: italic;color:#FFC300">Sustainability.</span></h5>
+    </div>
+    <img src="asset/Rectangle 17.png" alt="">
+  </section>
+
+  <section class="about">
+    <div class="gambar">
+      <img src="asset/Rectangle 14.png" alt="">
+    </div>
+    <div style="margin-left: 3rem;" class="desc">
+      <h5 style="font-size: 50px;margin-bottom: 3rem;">About <span style="color: #2E7D32;">Us</span></h5>
+      <p style="letter-spacing: 0.5px;">Kami hadir untuk menjembatani teknologi dan keberlanjutan. Dengan fokus pada inovasi ramah lingkungan, kami mengembangkan solusi cerdas yang membantu bisnis bertransformasi tanpa merusak alam. setiap langkah kami didorong oleh visi untuk menciptakan masa depan di mana kemajuan dan kelestarian dapat berjalan beriringan.</p>
+      <a href="" class="button-3">Discover More</a>
+    </div>
+  </section>
+
+  <section class="produk">
+    <div class="text">
+      <h5 style="color: #FFC300;">Produk</h5>
+      <h5>Kami</h5>
+    </div>
+    <div class="slider">
+      <div class="slider-track">
+        <div class="slide">
+          <img src="asset/1.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="asset/2.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="asset/3.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="asset/4.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="asset/5.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="asset/6.png" alt="">
+        </div>
+
+        <div class="slide">
+          <img src="asset/1.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="asset/2.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="asset/3.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="asset/4.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="asset/5.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="asset/6.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    window.addEventListener("scroll", function () {
+      const nav = document.querySelector("nav");
+      const homeSection = document.querySelector(".home");
+      const triggerPoint = homeSection.offsetHeight - 80; // tinggi banner
+  
+      if (window.scrollY > triggerPoint) {
+        nav.classList.add("sticky");
+      } else {
+        nav.classList.remove("sticky");
+      }
+    });
+  </script>  
 </body>
 </html>
