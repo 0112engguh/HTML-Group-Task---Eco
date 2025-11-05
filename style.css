@@ -15,7 +15,7 @@
 
 .home {
   width: 100%;
-  height: 70vh;
+  height: 90vh;
   background-image: url(asset/banner.png);
   background-size: cover;
   background-position: center;
@@ -26,14 +26,14 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 10vh;
+  height: 8vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 2px 50px;
+  padding: 15px 50px;
   z-index: 10;
-  transition: all 0.5s ease; /* Transisi halus */
-  background: transparent; /* awalnya transparan */
+  transition: all 0.5s ease;
+  background: #005624; 
 }
 
 nav .logo {
@@ -51,10 +51,11 @@ nav ul li {
 }
 
 nav ul li a {
-  position: relative;
+  align-items: center;
   left: 50px;
   margin: 0 16px;
-  top: -5px;
+  /* top: -5px; */
+  margin-top: 5px;
   font-size: 15px;
   text-decoration: none;
   color: white;
@@ -62,40 +63,44 @@ nav ul li a {
   transition: color 0.3s ease;
 }
 
-/* garis bawah hover */
-nav ul li a::after {
-  content: '';
-  position: absolute;
-  background-color: white;
-  height: 3px;
-  width: 0;
-  left: 0;
-  bottom: -10px;
-  transition: 0.3s;
+nav ul li a:hover,  
+nav ul li a:active{
+  color: #FFC300;
 }
 
-nav ul li a:hover::after {
-  width: 100%;
-}
-
-/* Saat sticky */
 nav.sticky {
-  background: #2E7D32;
+  background: transparent;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   backdrop-filter: blur(10px);
 }
 
 nav.sticky ul li a {
-  color: #fff;
+  color: #005624;
+}
+nav.sticky ul li a:hover{
+  color: #FFC300;
 }
 
+nav .logo {
+  transition: filter 0.3s ease;
+}
+
+/* Saat sticky, ubah jadi hijau */
+nav.sticky .logo {
+  filter: invert(53%) sepia(36%) saturate(562%) hue-rotate(84deg) brightness(92%) contrast(90%);
+}
 
 .content {
   display: flex;
   margin: auto;
-  padding-top: 7rem;
+  padding-top: 10rem;
   justify-content: center;
   z-index: 2;
+}
+
+.text {
+  text-align: center;
+  color: white;
 }
 
 .text h5 {
@@ -104,24 +109,11 @@ nav.sticky ul li a {
   font-weight: bold;
 }
 
-.text p {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-  color: #ffff;
-}
-
-.intro{
-  padding: 9rem 8rem;
-}
-
-.intro h5 {
-  font-size: 40px;
-}
-
-.intro img {
-  margin-top: 1rem;
+.green-line {
   width: 100%;
+  height: 6vh;
+  align-items: center;
+  background: #005624; 
 }
 
 .about {
@@ -134,21 +126,34 @@ nav.sticky ul li a {
   height: 70vh;
 }
 
-/* CSS */
+.garis {
+  width: 14rem;
+  height: 3px;
+  background-color: black;
+}
+
+.button-1 {
+  padding: 5px 40px;
+  border-radius: 9px;
+  background-color: #FFC300;
+  text-decoration: none;
+  color: black;
+  font-weight:600;
+}
+
 .button-3 {
   appearance: none;
   background-color: #2ea44f;
-  border: 1px solid rgba(27, 31, 35, .15);
   border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;  
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
   font-size: 14px;
   font-weight: 600;
+  font-style: italic;
   line-height: 20px;
-  padding: 6px 16px;
+  padding: 6px 30px;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -174,90 +179,49 @@ nav.sticky ul li a {
   outline: none;
 }
 
-.button-3:disabled {
-  background-color: #94d3a2;
-  border-color: rgba(27, 31, 35, .1);
-  color: rgba(255, 255, 255, .8);
-  cursor: default;
+.about-product {
+  padding: 3rem 8rem;
 }
 
-.button-3:active {
-  background-color: #298e46;
-  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+.about-product h3 {
+  font-size: 3rem;
 }
 
-.produk {
-  width: 100%;
-  height: 45vh;
-  background-color: #256228;
-  padding: 2rem 10rem;
+.row-1 {
   display: flex;
-  align-items: center;
-  overflow: hidden; /* penting agar gambar tidak keluar area */
-}
-
-.produk .text {
-  margin-right: 20px;
-}
-
-.slider {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  width: 100%;
-}
-
-.slider-track {
-  display: flex;
-  width: calc(250px * 12);
-  animation: scroll 30s linear infinite; /* animasi loop */
-}
-
-.slide {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  min-width: 250px;
-  padding: 10px;
 }
 
-.slider img {
-  width: 250px;
-  height: auto;
+.row-2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.card {
+  color: white;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  padding: 0 5px;
+  text-align: center;
+  width: 19rem;
+  background-color: #5CAE60;
+  padding: 30px 50px;
+  margin-right: 1rem;
+
 }
 
-/* Efek gradasi di pinggir */
-.slider::before,
-.slider::after {
-  content: '';
-  position: absolute;
-  width: 10%;
-  height: 100%;
-  z-index: 2;
+.card img {
+  width: 5rem;
+  height: 5rem;
+  margin: 1.5rem 0;
 }
 
-/* .slider::before {
-  left: 0;
-  top: 0;
-  background: linear-gradient(to right, #256228 10%, transparent);
+.card h5 {
+  font-size: 20px;
 }
 
-.slider::after {
-  right: 0;
-  top: 0;
-  background: linear-gradient(to left, #256228 10%, transparent);
-} */
-
-/* ANIMASI BERJALAN TERUS */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 6)); /* geser separuh dari total gambar */
-  }
+.contact-us {
+  padding: 3rem 8rem;
+  width: 100%;
+  height: 50vh;
+  background-color: #005624;
 }
